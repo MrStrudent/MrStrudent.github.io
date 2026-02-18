@@ -1,0 +1,376 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+html, body{
+  height: 100%;
+  margin: 0;
+}
+body{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+nav{
+  width: 100%;
+  padding: 1rem 5%;
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  background-color: #0f172a;
+  padding: 3px;
+  box-shadow: #0f172a;
+  font-size: 20px;
+}
+nav ul{
+  margin: 0;
+  padding: 0;
+}
+.logo{
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #38bdf8;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.nav-links{
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a{
+  position: relative;
+  font-size: 1.05rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #e2e8f0;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover{
+  color: #38bdf8;
+  text-shadow: 0 0 10px #38bdf8;
+}
+
+.btns{
+  display: flex;
+}
+.btn{
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  background: #38bdf8;
+  color: #0f172a;
+  box-shadow: 0 0 15px #38bdf8;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover{
+  background: #0aa9f3;
+  box-shadow: 0 0 25px #0aa9f3;
+}
+.btn:active{
+  transform: translateY(-1px);
+}
+
+
+.hero{
+    position: relative;
+    display: grid;
+    place-content: center;
+    min-height: 80vh;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    background-image: linear-gradient( to bottom right,
+    hsla(240, 100%, 20%, 0.8),
+    hsla(0, 100%, 15%, 0.7)
+    ), url("media/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 15px;
+}
+
+.title{
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  text-shadow: 0 2px 10px rgba(0,0,0,0,0.3);
+  margin-top: 0;
+  font-size:20;
+  
+}
+
+.location{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+.location svg{
+  color: #ff4d4d;
+  filter: drop-shadow(0 0 5px rgba(255, 77, 77, 0.5));
+}
+
+.hero-content{
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 3rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 800px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inicio button{
+    display: flex;
+}
+
+header{
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    text-decoration: double;
+    background-color: transparent;
+    margin: 0;
+    padding: 10px;
+    font-size: 20px;
+}
+
+main{
+  flex: 1;
+  width: 100%;
+  background-color: #f1f5f9;
+}
+
+
+footer{
+  font-family: "Montserrat", sans-serif;
+  background-color: #0f172a;
+  text-align: center;
+  padding: 2px;
+  font-size: 14px;
+}
+/* Estilo general de la seccion */
+.services-section{
+  background-color: #f1f5f9; /* gris suave */
+  padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+/* tarjeta blanca */
+.card-white{
+  background-color: white;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 10px 40px rgba(0,0,0,0,0.08); /* sombra */
+  width: 100%;
+  max-width: 1000px; /* ancho maximo */
+  text-align: center;
+}
+
+.section-title{
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: #1e293b;
+}
+/* grid de 3 columnas */
+.services-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* esto es para ajuste de telefonos */
+  gap: 2rem;
+}
+/*servicio individual */
+.service-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-title{
+  color: #38bdf8;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+.service-item p{
+  font-size: 15px;
+}
+/*propiedad para la rotacion */
+@property --deg{
+  syntax: '<angle>';
+  inherits: true;
+  initial-value: 0deg;
+}
+/*circulo de los servicios*/
+.icon-bg{
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* hacer que los elementos se anclen aqui */
+  z-index: 1; /* se pone el circulo sobre lo demas */
+  background: #142d4a; /* fondo para que encaje */
+  border-radius: 50%; /* que sea circulito */
+  transition: transform 0.3s ease;
+}
+/* hacer que gire el borde */
+.icon-bg::before,
+.icon-bg::after{
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%; /* asi se forma el circulito */
+  background: conic-gradient(
+    from var(--deg) at center,
+    #00c3ff,
+    #4d0199,
+    #6300c6,
+    #00c3ff
+  );
+  z-index: -1; /* se coloca detras del circulo principal */
+  animation: autoRotate 2s linear infinite;
+}
+/* efecto de brillo borroso */
+.icon-bg::after{
+  filter: blur(15px); /* desenfoque para efecto neon */
+  opacity: 0.8;
+}
+/*  Ajustar icono de svg*/
+.icon-bg svg{
+  width: 35px;
+  height: 35px;
+  color: whitesmoke; /* cambiar el color del icono svg */
+  stroke-width: 1.5;
+  filter: drop-shadow(0 0 5px rgba(0, 195, 255, 0.5));
+}
+
+@keyframes autoRotate {
+  to{
+    --deg: 360deg;
+  }
+}
+
+.service-item:hover .icon-bg{
+  transform: scale(1.1);
+}
+/* efecto hover smooth*/
+.service-item:hover .icon-bg{
+  transform: scale(1.1);
+}
+
+.service-item p{
+  color: #64748b;
+  font-size: 0.96rem;
+  line-height: 1.6;
+}
+
+.contact-section{
+  padding: 4rem 1rem;
+  text-align: center;
+  background: gray;
+  color: white;
+  border-radius: 5%;
+}
+.contact-section h2{
+  color: white;
+}
+.contact-form fieldset{
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255,255,255,0.1);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto; 
+}
+
+.input-group{
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.input-group label{
+  display: block;
+  margin-bottom: 5px;
+  color: #cbd5e1;
+}
+.input-group input,
+.input-group textarea{
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background: rgba(255,255,255,0.9);
+}
+
+.btn-submit{
+  background-color: #38bdf8;
+  color: #0f172a;
+  border: none;
+  padding: 10px 30px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.informacion{
+  text-decoration: none;
+}
+.fade-carousel{
+  position: relative;
+  width: 100%;
+  height: 350px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.fade-carousel img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: fade 16s infinite;
+  border-radius: 20px;
+}
+.fade-carousel img:nth-child(1) {animation-delay: 0s;}
+.fade-carousel img:nth-child(2) {animation-delay: 4s;}
+.fade-carousel img:nth-child(3) {animation-delay: 8s;}
+.fade-carousel img:nth-child(4) {animation-delay: 12s;}
+@keyframes fade{
+  0% { opacity: 0;}
+  10% { opacity: 1;}
+  33% { opacity: 1;}
+  43% { opacity: 0;}
+  100% { opacity: 0;}
+}
+.service-item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
